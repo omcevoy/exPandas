@@ -22,6 +22,6 @@ Apart from that, I used Pandas to determine the best pokemon for each type and q
 ![img3](https://github.com/omcevoy/exPandas/blob/master/pokemon/img/img3.png) 
 
 * For the last image, I was only interested in data from the generation 1 pokemon. Using the "Total", the sum of all the pokemon's stats, I was able to determine the ten strongest types. 
-* This plot reveals that legendaries Moltres, Zapdos, and MewTwo are all the strongest in their respective type
+* This plot reveals that legendaries are typically the strongest in their respective type
 * The strongest non-legendary pokemon is a Psychic type, Alakazam
 * The two types with the highest amount of pokemon that are above the average are Water & Normal
