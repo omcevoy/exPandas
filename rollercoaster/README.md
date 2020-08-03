@@ -1,6 +1,6 @@
 # More Practice With Pandas and Matplotlib
 
-This project was completed so I could get more practice using Pandas and Matplotlib. This project was assigned to me as a part of the codecademy Data Science curriculum. 
+This project was completed so I could get more practice using Pandas and Matplotlib. For this project, I was given three files containing data about roller coasters. 
 
 I ended up obtaining 6 visualizations that are shown below. 
 
