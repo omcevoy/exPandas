@@ -7,4 +7,4 @@ This repository was initially created so I'd have a place to store all of my pra
 
 Right now there are 2 projects posted:
 * An analysis of [Pokemon](https://github.com/omcevoy/exPandas/tree/master/pokemon)
-** In this project I look into the stats of each Pokemon, determine the most powerful type(s) for generation 1, and analyze just how powerful legendary pokemon are
+* * In this project I look into the stats of each Pokemon, determine the most powerful type(s) for generation 1, and analyze just how powerful legendary pokemon are
