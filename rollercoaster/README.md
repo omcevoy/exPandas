@@ -1,4 +1,4 @@
-# More Practice With Pandas and Matplotlib
+# Roller Coasters
 
 This project was completed so I could get more practice using Pandas and Matplotlib. For this project, I was given three files containing data about roller coasters. 
 
