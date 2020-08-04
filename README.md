@@ -1,8 +1,7 @@
 # exPandas
 
 
-This repository was initially created so I'd have a place to store all of my practice work with Pandas, but has recently become more of the homebase for all my data analysis related projects. At the moment it includes projects I am completing off of Kaggle and Codecademy, although I hope to start adding EDA projects soon. 
-
+This repository is the homebase for all my data analysis related projects where I use Python as my main tool.
 
 Right now there are 2 projects posted:
 * Analyzing [Pokemon](https://github.com/omcevoy/exPandas/tree/master/pokemon) using Pandas, Matplotlib, & Seaborn
