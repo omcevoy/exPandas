@@ -9,3 +9,6 @@ Right now there are 2 projects posted:
   
 * Analyzing [Roller Coasters](https://github.com/omcevoy/exPandas/tree/master/rollercoaster) using Pandas & Matplotlib
   * In this project I created 6 functions that simply visualized the 3 datasets in different & unique ways
+  
+* Using Pandas, Matplotlib, Seaborn, and NumPy to see how [MLS](https://github.com/omcevoy/exPandas/tree/master/mls) has changed over the last 10 years
+  * A look into how the league is paying its players, how teams are spending their money, and how players salaries have changed over the past decade
