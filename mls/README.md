@@ -7,10 +7,19 @@ This repo includes the work for an exploratory data analysis project I did on da
 
 ![playerSal](https://github.com/omcevoy/exPandas/blob/master/mls/img/playerSal.png)
 
+This graphic reveals that in the past 10 years, MLS has significantly signed more players as one would expect due to the addition of multiple expansion teams. Additionally, more players in the league are earning higher wages. In 2019 roughly 54% of MLS players earned less than $200,000 annually (base salary), whereas in 2009 nearly 91% of the players were earning below $200,000.
+
 ![compare](https://github.com/omcevoy/exPandas/blob/master/mls/img/comparedPayroll.png)
+This graphic compares the payrolls of the original 14 MLS teams after the ten years. The general trend here is that most teams have significantly increased their payroll during this period. Some teams such as Toronto FC, Sporting KC, and Seattle have invested heavily into their players and have had championship seasons to show for it.  
 
 ![position](https://github.com/omcevoy/exPandas/blob/master/mls/img/payrollByPos.png)
+This graphic looks at each teams payroll broken down by position. The graphic reveals that most teams spend the most money on their attacking players. This fact translates on the field, as MLS is notorious for bad defending and lack of solid team play.  
+
+It is worth noting that for players listed as a 'D-M' or 'M-F', meaning they may occasionally play in the midfield, I included them in the Defenders/Forwards budget as they were likely signed to contribute on the defensive/attacking ends. 
 
 ![swarmplot](https://github.com/omcevoy/exPandas/blob/master/mls/img/swarmplot.png)
 
+The swarmplot provides extra insight to how teams pay their players. The different ideologies throughout the league are prevalent here. LA Galaxy takes the traditional MLS approach by offering a single player a large salary and hope he carries the weight, while a team like Toronto FC has 3 players earning good salaries. It is also visibly apparent, that the majority of players are earning below the league average. 
+
 ![scatter](https://github.com/omcevoy/exPandas/blob/master/mls/img/scatter.png)
+This scatter plot looks at the relationship between an attacking budget and the number of wins a team gets in a season. The points on the graph are also sized based off of the number of goals the team scored throughout the season. 
