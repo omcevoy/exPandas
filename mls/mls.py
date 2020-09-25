@@ -41,6 +41,9 @@ positions = ['D', 'M', 'F', 'GK', 'D-M', 'F-M']
 positionSpend = {}
 
 df2019 = df2019[~df2019['club'].isin(["Inter Miami", "Major League Soccer", "Nashville SC"])]
+
+df2019['club'] = df2019['club'].replace(["Philadelphia Union", "Seattle Sounders FC", "Colorado Rapids", "Columbus Crew", "DC United", "FC Dallas", "Orlando City SC", "Atlanta United", "FC Cincinnati", "Vancouver Whitecaps", "San Jose Earthquakes", "New England Revolution", "Toronto FC", "LA Galaxy", "Real Salt Lake", "Minnesota United", "New York City FC", "Portland Timbers", "Chicago Fire", "Sporting Kansas City", "New York Red Bulls", "Montreal Impact", "Houston Dynamo", "Major League Soccer"],
+											  ["PHI", "SEA", "COL", "CLB", "DC", "DAL", "ORL", "ATL", "CIN", "VAN", "SJ", "NE", "TFC", "LA", "RSL", "MIN", "NYFC", "POR", "CHI", "KC", "NY", "MON", "HOU", "MLS"])
 for club in clubs2009['club']: 
     clubData = df2009[df2009['club'] == club]
     goodToAdd = False
@@ -129,14 +132,13 @@ def plotSwarm():
 	plt.style.use("dark_background")
 	fig, ax = plt.subplots(figsize = (16, 8))
 	sns.swarmplot(x = 'club', y = 'cy-annual', data = df2019, hue = 'position')
-	plt.axhline(df2019['cy-annual'].median(), color = 'red', linestyle = 'dashed', label = 'League Average')
-	plt.xticks(rotation = 90)
+	plt.axhline(df2019['cy-annual'].mean(), color = 'red', linestyle = 'dashed', label = 'League Average')
+	plt.xticks(rotation = 35)
 	ax.ticklabel_format(style = 'plain', axis = 'y')
 	ax.get_yaxis().set_major_formatter(plt.FuncFormatter(lambda x, loc: "{:,}".format(int(x))))
 	plt.title('How Different MLS Franchises Pay their Players')
-	plt.ylabel('Annual Wage')
+	plt.ylabel('Annual Wage ($)')
 	plt.legend()
-
 
 # <-------- 2019 MLS Player Salary Distribution (Histogram) --------->
 
@@ -150,7 +152,7 @@ def plotHist():
 	plt.xlabel("Salary Range")
 	plt.ylabel("Number of Players")
 	plt.hist([np.clip(df2009['cy-annual'], bins[0], bins[-1]),
-			  np.clip(df2019['cy-annual'], bins[0], bins[-1])], bins = bins, rwidth = 0.85, label = ['2009', '2019'])
+			  np.clip(df2019['cy-annual'], bins[0], bins[-1])], color = ['lightcoral', 'maroon'], bins = bins, rwidth = 0.85, label = ['2009', '2019'])
 	plt.legend(loc = 'upper right')
 	n_labels = len(binLabels)
 	plt.xlim([0, 1000000])
@@ -159,7 +161,6 @@ def plotHist():
 	xticks = ax.xaxis.get_major_ticks()
 	xticks[0].label1.set_visible(False)
 	fig.tight_layout()
-
 
 def comparePayroll():
 	plt.style.use("fivethirtyeight")
@@ -202,11 +203,16 @@ def payrollByPosition():
 def makeScatter():
 	plt.style.use("fivethirtyeight")
 	fig,ax = plt.subplots(figsize = (12, 6))
-	sns.scatterplot(data = clubs2019, x = 'fwd-budget', y = 'Wins', size = 'GF')
+	g = sns.scatterplot(data = clubs2019, x = 'fwd-budget', y = 'Wins', size = 'GF', color = 'maroon')
 	plt.xlabel("Money Spent on Attacking Players")
 	plt.ylabel("Number of Regular Season Wins")
 	plt.ticklabel_format(style = 'plain')
 	ax.get_xaxis().set_major_formatter(plt.FuncFormatter(lambda x, loc: "{:,}".format(int(x))))
-
+	handles, labels = ax.get_legend_handles_labels()
+	plt.title("Wins vs Attacking Budget")
+	plt.legend(
+           handles=handles[1:], labels=labels[1:],
+           title = "Goals Scored"
+          )
 makeScatter()
 plt.show()
